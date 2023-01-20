@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>EIT: Hejmo</title>
+		<link rel="stylesheet" href="styles.css">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<link rel="icon" type="image/png"  href="favicon.png" />
+		<link rel="apple-touch-icon" href="touch-icon-iphone.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="touch-icon-iphone-retina.png">
+		<link rel="apple-touch-icon" sizes="167x167" href="touch-icon-ipad-retina.png">
+		<meta name="language" content="eo">
+		<meta name="title" content="EIT">
+		<meta name="author" content="EIT">
+		<meta name="copyright" content="©2023 Esperanta Interreta Televido">
+		<meta name="robots" content="index, follow">
+		<meta name="subject" content="Official Website">
+		<meta name="keywords" content="EIT, Hejmo">
+		<meta name="description" content="Hejmo">
+		<meta name="classification" content="Hejmo">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="Hejmo">
+		<meta property="og:image" content="favbanner.png">
+		<meta property="og:locale" content="eo">
+		<meta property="og:site_name" content="EIT: Hejmo">
+		<meta property="og:description" content="Hejmo">
+		<script src="mobnav.js"></script>
+		<script src="horaro.js"></script>
+		<script>
+		var timerID = setInterval(function () {
+			horaro();	
+		}, 60 * 1);
+		</script>
+	</head>
+	<body>
+		<ul class="desknav">
+			<li class="activedesk"><a class="deskurl" href="">Hejmo</a>
+			<li class="desknavitem"><a class="deskurl" href="pri/">Pri</a>
+			<li class="desknavitem"><a class="deskurl" href="kantakto/">Kantakto</a>
+		</ul>
+		<div class="mobbar">
+			<img src="mobnav.svg" class="mobnavbutt" id="mobnavbutt" onclick="showmobnav()">
+		</div>
+		<ul class="mobnav" id="mobnav">
+			<li class="activemob"><a href="" class="mobnavurl">Hejmo</a></li>
+			<li class="mobnavitem"><a href="pri/" class="mobnavurl">Pri</a></li>
+			<li class="mobnavitem"><a href="kantakto/" class="mobnavurl">Kantakto</a></li>
+		</ul>
+		
+		<div class="banner">
+			<h1 class="bannertext">Bonvenon al la retejo</h1>
+		</div>
+		<div class="main">
+			<center>
+				<iframe src="http://youtube.com/embed/jvDRXDVj84I" width="480" height="320"></iframe>
+			</center>
+			<h2 class="horaro" id="horarotxt">Nun elsendiĝas: </h2>
+		</div>
+		<div class="copyright">
+			<h2>&copy;2023 Esperanta Interreta Televido</h2>
+		</div>
+	</body>
+</html>

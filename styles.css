@@ -1,0 +1,169 @@
+@font-face {
+  font-family: "cefa";
+  src: url(cefa.ttf);
+}
+
+body {
+	font-family: cefa;
+	margin: 0;
+	padding: 0;
+}
+
+.desknav {
+	width: 97.37%;
+	background-color: #DDDDDD;
+	height: 55px;
+	margin-top: -4px;
+	display: block;
+	text-align: center;
+}
+
+.desknavitem {
+	display: inline-block;
+	font-size: 24px;
+	float: left;
+	padding: 14px 16px;
+	
+}
+
+.desknavitem:hover {
+	text-decoration: underline;
+	text-decoration-thickness: 3px;
+	text-decoration-color: #0E9948;
+}
+
+.deskurl {
+	color: #0E9948;
+	text-decoration: none;
+}
+
+.banner {
+	display: grid;
+	width: 100%;
+	height: 120px;
+	text-align: center;
+	background-color: #0E9948;
+	margin-top: -16px;
+}
+
+.bannertext {
+	font-size: 84px;
+	color: #DDDDDD;
+	margin-top: 12px;
+}
+
+.main {
+	display: grid;
+	width: 100%;
+	height: 640px;
+	text-align: center;
+	margin-top: 8px;
+}
+
+.copyright {
+	display: grid;
+	width: 100%;
+	height: 84px;
+	text-align: center;
+	margin-top: 16px;
+	background-color: #0E9948;
+	color: #DDDDDD;
+}
+
+
+.activedesk {
+	text-decoration: underline;
+	text-decoration-color: #0E9948;
+	text-decoration-thickness: 3px;
+	display: inline-block;
+	font-size: 24px;
+	float: left;
+	padding: 14px 16px;
+}
+
+.mobbar {
+	display: none;
+}
+
+.mobnav {
+	display: none;
+}
+
+.mobnavitem {
+	display: none;
+}
+
+.mobnavitem:hover {
+		background-color: #444444;
+	}
+
+.activemob {
+	display: none;
+}
+
+.horaro {
+	margin-top: -88px;
+}
+
+
+@media (max-width: 600px) {
+	
+	.desknav {
+		display: none;
+	}
+	
+	.mobbar {
+		display: block;
+		width: 100%;
+		height: 55px;
+		margin-top: -4px;
+		background-color: #0E9948;
+	}
+	
+	.mobnavbutt:hover {
+		background-color: #0C7726;
+	}
+	
+	.mobnav {
+		display: none;
+		width: 100%;
+		height: auto;
+		list-style: none;
+		background-color: #0E9948;
+		margin-top: 0px;
+		position: fixed;
+	}
+	
+	.mobnavurl {
+		color: white;
+		font-size: 24pt;
+	}
+	
+	.mobnavitem {
+		padding: 14px 16px;
+		margin-left: -40px;
+		display: block;
+	}
+	
+	.mobnavitem:hover {
+		background-color: #0C7726;
+	}
+	
+	.activemob {
+		background-color: #0C7726;
+		padding: 14px 16px;
+		margin-left: -40px;
+		display: block;
+	}
+	
+	.banner {
+		background-color: #DDDDDD;
+		margin-top: 0px;
+	}
+	
+	.bannertext {
+		font-size: 58px;
+		color: #0E9948;
+	}
+	
+}
