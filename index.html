@@ -1,301 +1,67 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-<head>
-	<title>デムテレビ</title>
-	<link rel="stylesheet" href="style.css">
-	<link rel="icon" href="favico.png">
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  user-scalable=0">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="language" content="en/jp">
-	<meta name="title" content="デムテレビ">
-	<meta name="author" content="ダニー">
-	<meta name="copyright" content="©2000-2022 ダニー">
-	<meta name="robots" content="index, follow">
-	<meta name="subject" content="デムテレビ">
-	<meta name="keywords" content="デムテレビ">
-	<meta name="description" content="デムテレビ">
-	<meta name="classification" content="デムテレビ">
-	<meta property="og:type" content="website">
-	<meta property="og:title" content="デムテレビ">
-	<meta property="og:image" content="favico.png">
-	<meta property="og:locale" content="en/jp">
-	<meta property="og:site_name" content="デムテレビ">
-	<meta property="og:description" content="デムテレビ">
-	<link rel="apple-touch-icon" href="touch-icon-iphone.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="touch-icon-iphone-retina.png">
-	<link rel="apple-touch-icon" sizes="167x167" href="touch-icon-ipad-retina.png">
-	<script src="time.js"></script>
-	<script src="hover.js"></script>
-	<script src="light.js"></script>
-	<script>
+	<head>
+		<title>EIT: Hejmo</title>
+		<link rel="stylesheet" href="styles.css">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<link rel="icon" type="image/png"  href="favicon.png" />
+		<link rel="apple-touch-icon" href="touch-icon-iphone.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="touch-icon-iphone-retina.png">
+		<link rel="apple-touch-icon" sizes="167x167" href="touch-icon-ipad-retina.png">
+		<meta name="language" content="eo">
+		<meta name="title" content="EIT">
+		<meta name="author" content="EIT">
+		<meta name="copyright" content="©2023 Esperanta Interreta Televido">
+		<meta name="robots" content="index, follow">
+		<meta name="subject" content="Official Website">
+		<meta name="keywords" content="EIT, Hejmo">
+		<meta name="description" content="Hejmo">
+		<meta name="classification" content="Hejmo">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="Hejmo">
+		<meta property="og:image" content="favbanner.png">
+		<meta property="og:locale" content="eo">
+		<meta property="og:site_name" content="EIT: Hejmo">
+		<meta property="og:description" content="Hejmo">
+		<script src="mobnav.js"></script>
+		<script src="horaro.js"></script>
+		<script>
 		var timerID = setInterval(function () {
-			gettimeus();
-			gettimejp();
-			
+			horaro();	
 		}, 60 * 1);
+		</script>
+	</head>
+	<body>
+		<ul class="desknav">
+			<li class="activedesk"><a class="deskurl" href="">Hejmo</a>
+			<li class="desknavitem"><a class="deskurl" href="pri/">Pri</a>
+			<li class="desknavitem"><a class="deskurl" href="kantakto/">Kantakto</a>
+		</ul>
+		<div class="mobbar">
+			<img src="mobnav.svg" class="mobnavbutt" id="mobnavbutt" onclick="showmobnav()">
+		</div>
+		<ul class="mobnav" id="mobnav">
+			<li class="activemob"><a href="" class="mobnavurl">Hejmo</a></li>
+			<li class="mobnavitem"><a href="pri/" class="mobnavurl">Pri</a></li>
+			<li class="mobnavitem"><a href="kantakto/" class="mobnavurl">Kantakto</a></li>
+		</ul>
 		
-		setTimeout(function(){ 
-			holiday();
-			lightchk();
-		}, 1500);
-		
-	</script>
-</head>
-<body>
-	<audio autoplay>
-		<source src="startup.wav" type="audio/mp3">
-	</audio>
-	<audio id="hover">
-		<source src="hover.wav" type="audio/mp3">
-	</audio>
-	<audio id="selected">
-		<source src="select.wav" type="audio/mp3">
-	</audio>
-	
-	<div class="bg" id ="bg">
-	</div>
-		<div class="content">
-			
-			<div class="grid-topbar">
-				<div class="grid-item">
-					<div id="ustime" onclick="showjptime()" class="clockbox">
-						<h1 class="clock" id="ustime">TIME</h1>
-					</div>
-					<div id="jptime" onclick="showustime()" class="clockbox" style="display: none;">
-						<h1 class="clock" id="jptime" onclick="showustime()">TIME</h1>
-					</div>
-					<div class="switch" id="switchbutt" onclick="light()"></div>
-				</div>
-			</div>
-		
-		
-			<div class="grid-main">
-				<div class="grid-item">
-
-					<div class="grid-channel" onmouseover="hoverfx()">
-						<div class="grid-item">
-							<a href="https://pbs.lls.cdn.pbs.org/est/index.m3u8">
-								<img src="banners/pbs.svg" class="logo">
-							</a>
-						</div>
-					</div>
-
-					<div class="grid-channel" onmouseover="hoverfx()">
-						<div class="grid-item">
-							<a href="https://www.wwlp.com/watch-live/">
-								<img src="banners/wwlp.svg" class="logo">
-							</a>
-						</div>
-					</div>
-					
-					<div class="grid-channel" onmouseover="hoverfx()">
-						<div class="grid-item">
-							<a href="http://v-ny.theus6tv.duckdns.org/hls/4.1/playlist.m3u8">
-								<img src="banners/nbc10.svg" class="logo">
-							</a>
-						</div>
-					</div>
-					
-					<div class="grid-channel" onmouseover="hoverfx()">
-						<div class="grid-item">
-							<a href="https://livestream.chdrstatic.com/b93e5b0d43ea306310a379971e384964acbe4990ce193c0bd50078275a9a657d/cheddar-42620/cheddarweblive/cheddar/index.m3u8">
-								<img src="banners/cheddar.svg" class="logo">
-							</a>
-						</div>
-					</div>
-
-					<div class="grid-channel" onmouseover="hoverfx()">
-						<div class="grid-item">
-							<a href="http://n1.klowdtv.net/live2/pop_720p/playlist.m3u8">
-								<img src="banners/poptv.svg" class="logo">
-							</a>
-						</div>
-					</div>
-
-
-					<div class="grid-channel" onmouseover="hoverfx()">
-						<div class="grid-item">
-							<a href="https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/5f36d726234ce10007784f2a/master.m3u8?advertisingId=channel&appName=rokuchannel&appVersion=1.0&bmodel=bm1&channel_id=channel&content=channel&content_rating=ROKU_ADS_CONTENT_RATING&content_type=livefeed&coppa=false&deviceDNT=1&deviceId=channel&deviceMake=rokuChannel&deviceModel=web&deviceType=rokuChannel&deviceVersion=1.0&embedPartner=rokuChannel&genre=ROKU_ADS_CONTENT_GENRE&is_lat=1&platform=web&rdid=channel&studio_id=viacom&tags=ROKU_CONTENT_TAGS">
-								<img src="banners/bobross.svg" class="logo">
-							</a>
-						</div>
-					</div>
-
-					<div class="grid-channel" onmouseover="hoverfx()">
-						<div class="grid-item">
-							<a href="https://service-stitcher.clusters.pluto.tv/stitch/hls/channel/5812b7d3249444e05d09cc49/master.m3u8?advertisingId=&appName=web&appStoreUrl=&appVersion=DNT&app_name=&architecture=&buildVersion=&deviceDNT=0&deviceId=5812b7d3249444e05d09cc49&deviceLat=&deviceLon=&deviceMake=web&deviceModel=web&deviceType=web&deviceVersion=DNT&includeExtendedEvents=false&marketingRegion=US&serverSideAds=false&sid=830&terminate=false&userId=">
-								<img src="banners/animeallday.svg" class="logo">
-							</a>
-						</div>
-					</div>
-
-					<div class="grid-channel" onmouseover="hoverfx()">
-						<div class="grid-item">
-							<a href="https://contvanime-vizio-ingest.cinedigm.com/master.m3u8">
-								<img src="banners/contvanime.svg" class="logo">
-							</a>
-						</div>
-					</div>
-
-					<div class="grid-channel" onmouseover="hoverfx()">
-						<div class="grid-item">
-							<a href="http://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/5ca673e0d0bd6c2689c94ce3/master.m3u8?advertisingId=91a6ae51-6f9d-4fbb-adb0-bdfffa44693e&appVersion=unknown&coppa=1&deviceDNT=0&deviceId=91a6ae51-6f9d-4fbb-adb0-bdfffa44693e&deviceLat=0&deviceLon=0&deviceMake=samsung&deviceModel=samsung&deviceType=samsung-tvplus&deviceUA=samsung/SM-T720/10&deviceVersion=unknown&embedPartner=samsung-tvplus&profileFloor=&profileLimit=&samsung_app_domain=https://play.google.com/store/apps/details?id=com.samsung.android.tvplus&samsung_app_name=Mobile+TV+Plus&us_privacy=1YNY">
-								<img src="banners/nick.svg" class="logo">
-							</a>
-						</div>
-					</div>
-
-
-					<div class="grid-channel" onmouseover="hoverfx()">
-						<div class="grid-item">
-							<a href="https://tve-live-lln.warnermediacdn.com/hls/live/2023167/tooneast/slate/VIDEO_0_3564000.m3u8">
-								<img src="banners/cn.svg" class="logo">
-							</a>
-						</div>
-					</div>
-
-					<div class="grid-channel" onmouseover="hoverfx()">
-						<div class="grid-item">
-							<a href="https://loop-80s-2.roku.wurl.com/manifest/playlist.m3u8">
-								<img src="banners/loop80s.svg" class="logo">
-							</a>
-						</div>
-					</div>
-					
-					<div class="grid-channel" onmouseover="hoverfx()">
-						<div class="grid-item">
-							<a href="https://nhkwlive-ojp.akamaized.net/hls/live/2003459/nhkwlive-ojp-en/index.m3u8">
-								<img src="banners/nhkworld.svg" class="logo">
-							</a>
-						</div>
-					</div>
-					
-					
-					<div class="grid-channel">
-						<div class="grid-item">
-							<a href="https://nhk3.mov3.co/hls/nhk.m3u8" onmouseover="hoverfx()">
-								<img src="banners/nhkg.svg" class="logo">
-							</a>
-						</div>
-					</div>
-
-				<a href="http://redlabmcdn.s.llnwi.net/nv02/ryowa1hd/index.m3u8" onmouseover="hoverfx()">
-					<div class="grid-channel">
-						<div class="grid-item">
-							<img src="banners/nhke.svg" class="logo">
-						</div>
-					</div>
-				</a>
-				
-				<a href="https://ntv3.mov3.co/hls/ntv.m3u8" onmouseover="hoverfx()">
-					<div class="grid-channel">
-						<div class="grid-item">
-							<img src="banners/ntv.svg" class="logo">
-						</div>
-					</div>
-				</a>
-
-				<a href="http://redlabmcdn.s.llnwi.net/nv02/ryowa4hd/index.m3u8" onmouseover="hoverfx()">
-					<div class="grid-channel">
-						<div class="grid-item">
-							<img src="banners/tvasahi.svg" class="logo">
-						</div>
-					</div>
-				</a>
-
-
-				<a href="https://tbs2.mov3.co/hls/tbs.m3u8" onmouseover="hoverfx()">
-					<div class="grid-channel">
-						<div class="grid-item">
-							<img src="banners/tbs.svg" class="logo">
-						</div>
-					</div>
-				</a>
-
-				<a href="https://ok.ru/videoembed/4811368177268" onmouseover="hoverfx()">
-					<div class="grid-channel">
-						<div class="grid-item">
-							<img src="banners/tvtokyo.svg" class="logo">
-						</div>
-					</div>
-				</a>
-
-
-				<a href="https://fujitv3.mov3.co/hls/fujitv.m3u8" onmouseover="hoverfx()">
-					<div class="grid-channel">
-						<div class="grid-item">
-							<img src="banners/fujitv.svg" class="logo">
-						</div>
-					</div>
-				</a>
-
-				<a href="https://ok.ru/videoembed/5013239897847" onmouseover="hoverfx()">
-					<div class="grid-channel">
-						<div class="grid-item">
-							<img src="banners/tokyomx.svg" class="logo">
-						</div>
-					</div>
-				</a>
-						
-					<a href="https://youtube.com/embed/jvDRXDVj84I" onmouseover="hoverfx()">
-					<div class="grid-channel">
-						<div class="grid-item">
-							<img src="banners/eit.svg" class="logo">
-						</div>
-					</div>
-				</a>
-					
-					
-					<div class="grid-channel" onmouseover="hoverfx()">
-						<div class="grid-item">
-							
-						</div>
-					</div>
-					
-					<div class="grid-channel" onmouseover="hoverfx()">
-						<div class="grid-item">
-							
-						</div>
-					</div>
-					
-					<div class="grid-channel" onmouseover="hoverfx()">
-						<div class="grid-item">
-							
-						</div>
-					</div>
-					
-					<div class="grid-channel" onmouseover="hoverfx()">
-						<div class="grid-item">
-							
-						</div>
-					</div>
-					
-					
-					<div class="grid-channel" onmouseover="hoverfx()">
-						<div class="grid-item">
-							
-						</div>
-					</div>
-					
-					<div class="grid-channel" onmouseover="hoverfx()">
-						<div class="grid-item">
-							
-						</div>
-					</div>
-					
-					<div class="grid-channel" onmouseover="hoverfx()">
-						<div class="grid-item">
-							
-						</div>
-					</div>
-					
-					
-				</div>
-			</div>
+		<div class="banner">
+			<h1 class="bannertext">Bonvenon al la retejo</h1>
+		</div>
+		<div class="main">
+			<center>
+				<iframe src="https://youtube.com/embed/jvDRXDVj84I" width="320" height="240"></iframe>
+			</center>
+			<h2 class="horaro" id="horarotxt">Nun elsendiĝas: </h2>
+			<a class="horaro"  href="https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1674254926/ei/7sXKY66qEbL5gAe1gofgCw/ip/92.205.15.128/id/jvDRXDVj84I.1/source/yt_live_broadcast/requiressl/yes/tx/24276399/txs/24276394%2C24276395%2C24276396%2C24276397%2C24276398%2C24276399/hfr/1/playlist_duration/30/manifest_duration/30/maudio/1/vprv/1/go/1/pacing/0/nvgoi/1/keepalive/yes/fexp/24007246/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Ctx%2Ctxs%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Cvprv%2Cgo%2Citag%2Cplaylist_type/sig/AOq0QJ8wRgIhAPMVFYxn8wd_uophJvLEV8PJYYaq2a4EqTKFjf6tyMCxAiEAxHExf10FnUjtPgNTpVkAM-i1K5N1TC9pnI4jqoHSucg%3D/file/index.m3u8">Spektu en aliaj programoj</a>
 			
 		</div>
-</body>
+		<div class="copyright">
+			<h2>&copy;2023 Esperanta Interreta Televido</h2>
+		</div>
+	</body>
 </html>
-
