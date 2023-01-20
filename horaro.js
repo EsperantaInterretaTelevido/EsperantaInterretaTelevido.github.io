@@ -36,10 +36,16 @@ function horaro() {
 	if (horo == 13) {
 		horarotxt.innerText = "Nun elsendiĝas: Ĝenerala Programado"
 	}
+	if (horo == 14) {
+		horarotxt.innerText = "Nun elsendiĝas: Ĝenerala Programado"
+	}
 	if (horo == 15) {
 		horarotxt.innerText = "Nun elsendiĝas: Karikaturoj"
 	}
 	if (horo == 16) {
+		horarotxt.innerText = "Nun elsendiĝas: Ĝenerala Programado"
+	}
+	if (horo == 17) {
 		horarotxt.innerText = "Nun elsendiĝas: Ĝenerala Programado"
 	}
 	if (horo == 18) {
@@ -64,6 +70,9 @@ function horaro() {
 		horarotxt.innerText = "Nun elsendiĝas: For aero"
 	}
 	if (horo == 22) {
+		horarotxt.innerText = "Nun elsendiĝas: For aero"
+	}
+	if (horo == 23) {
 		horarotxt.innerText = "Nun elsendiĝas: For aero"
 	}
 }
