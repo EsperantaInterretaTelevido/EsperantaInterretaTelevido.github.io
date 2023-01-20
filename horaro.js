@@ -3,7 +3,12 @@ function horaro() {
 	horo = d.getUTCHours() - 5;
 	minutoj = d.getUTCMinutes();
 	sekundoj = d.getUTCSeconds();
-	horo = 24 + horo;
+	if (horo < 23) {
+		horo = 24 + horo;
+	}
+	if (horo > 23) {
+		horo = horo - 24;	
+	}
 	if (horo == 6 & minutoj == 0) {
 		horarotxt.innerText = "Nun elsendiĝas: Nacia Himno"
 	}
