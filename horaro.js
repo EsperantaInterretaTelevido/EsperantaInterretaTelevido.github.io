@@ -1,13 +1,22 @@
 function horaro() {
 	d = new Date;
 	horo = d.getUTCHours() - 5;
-	minutoj = d.getUTCMinutes;
-	sekundoj = d.getUTCMinutes;
+	minutoj = d.getUTCMinutes();
+	sekundoj = d.getUTCSeconds();
 	horo = 24 + horo;
-	if (horo == 6) {
+	if (horo == 6 & minutoj == 0) {
 		horarotxt.innerText = "Nun elsendiĝas: Nacia Himno"
 	}
 	if (horo == 6 & minutoj == 1 & sekundoj == 58) {
+		horarotxt.innerText = "Nun elsendiĝas: Karikaturoj"
+	}
+	if (horo == 6 & minutoj == 1 & sekundoj == 59) {
+		horarotxt.innerText = "Nun elsendiĝas: Karikaturoj"
+	}
+	if (horo == 6 & minutoj >= 2) {
+		horarotxt.innerText = "Nun elsendiĝas: Karikaturoj"
+	}
+	if (horo == 7) {
 		horarotxt.innerText = "Nun elsendiĝas: Karikaturoj"
 	}
 	if (horo == 9) {
@@ -37,10 +46,19 @@ function horaro() {
 	if (horo == 20) {
 		horarotxt.innerText = "Nun elsendiĝas: Karikaturoj"
 	}
-	if (horo == 21) {
+	if (horo == 21 & minutoj == 0) {
 		horarotxt.innerText = "Nun elsendiĝas: Nacia Himno"
 	}
 	if (horo == 21 & minutoj == 1 & sekundoj == 58) {
+		horarotxt.innerText = "Nun elsendiĝas: For aero"
+	}
+	if (horo == 21 & minutoj == 1 & sekundoj == 59) {
+		horarotxt.innerText = "Nun elsendiĝas: For aero"
+	}
+	if (horo == 21 & minutoj >= 2) {
+		horarotxt.innerText = "Nun elsendiĝas: For aero"
+	}
+	if (horo == 22) {
 		horarotxt.innerText = "Nun elsendiĝas: For aero"
 	}
 }
