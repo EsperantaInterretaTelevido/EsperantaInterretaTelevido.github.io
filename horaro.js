@@ -9,6 +9,24 @@ function horaro() {
 	if (horo > 23) {
 		horo = horo - 24;	
 	}
+	if (horo == 0) {
+		horarotxt.innerText = "Nun elsendiĝas: For aero"
+	}
+	if (horo == 1) {
+		horarotxt.innerText = "Nun elsendiĝas: For aero"
+	}
+	if (horo == 2) {
+		horarotxt.innerText = "Nun elsendiĝas: For aero"
+	}
+	if (horo == 3) {
+		horarotxt.innerText = "Nun elsendiĝas: For aero"
+	}
+	if (horo == 4) {
+		horarotxt.innerText = "Nun elsendiĝas: For aero"
+	}
+	if (horo == 5) {
+		horarotxt.innerText = "Nun elsendiĝas: For aero"
+	}
 	if (horo == 6 & minutoj == 0) {
 		horarotxt.innerText = "Nun elsendiĝas: Nacia Himno"
 	}
@@ -28,6 +46,9 @@ function horaro() {
 		horarotxt.innerText = "Nun elsendiĝas: Vetero kaj Novaĵoj"
 	}
 	if (horo == 10) {
+		horarotxt.innerText = "Nun elsendiĝas: Eduka Programado"
+	}
+	if (horo == 11) {
 		horarotxt.innerText = "Nun elsendiĝas: Eduka Programado"
 	}
 	if (horo == 12) {
