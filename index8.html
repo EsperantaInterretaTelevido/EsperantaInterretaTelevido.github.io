@@ -27,6 +27,12 @@
 		<meta property="og:site_name" content="EIT: Hejmo">
 		<meta property="og:description" content="Hejmo">
 		<script src="mobnav.js"></script>
+		<script src="horaro.js"></script>
+		<script>
+		var timerID = setInterval(function () {
+			horaro();	
+		}, 60 * 1);
+		</script>
 	</head>
 	<body>
 		<ul class="desknav">
@@ -48,8 +54,11 @@
 		</div>
 		<div class="main">
 			<center>
-				<img src="pauzo.png" alt="paŭzo" width="320" height="240"
+				<iframe src="https://youtube.com/embed/c_7-jtpbJf4" width="320" height="240"></iframe>
 			</center>
+			<h2 class="horaro" id="horarotxt">Nun elsendiĝas: </h2>
+			<a class="horaro"  href="https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1674341024/ei/PxbMY8DFO5b41wKSy7HIBw/ip/92.205.15.128/id/c_7-jtpbJf4.1/source/yt_live_broadcast/requiressl/yes/hfr/1/playlist_duration/30/manifest_duration/30/maudio/1/vprv/1/go/1/pacing/0/nvgoi/1/keepalive/yes/fexp/24007246/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Cvprv%2Cgo%2Citag%2Cplaylist_type/sig/AOq0QJ8wRQIgIiZSsDDZduhCeS1ddK9HFpyHqZ0A3b_o3iVNmyhzvQ8CIQCrC4aleNXLXac6ygXOvb0UCXvUh3QLVHF_VmVPdAQbWA%3D%3D/file/index.m3u8">Spektu en aliaj programoj</a>
+			
 		</div>
 		<div class="copyright">
 			<h2>&copy;2023 Esperanta Interreta Televido</h2>
